@@ -38,26 +38,26 @@ namespace HW_1_Progamming_2_Jenna_Tran
             discountCogs = ((cogs + (cogs * specialMarkup)));
             discountGears = ((gears + (cogs * specialMarkup)));
 
-            if (cogs1<=10 && gears1<=10)
-            {
-               // markupamount = cogs * standardMarkup;
+            
+            //{
+            //   // markupamount = cogs * standardMarkup;
                
-                //markupCogs = Convert.ToInt32((cogs + (cogs * standardMarkup)));
-                //markupGears = Convert.ToInt32((gears + (cogs * standardMarkup)));
-                discountAmount = 0.00;
-                totalcost = (cogs1 * markupCogs)+(gears1*markupGears);
-                Tax = totalcost * salesTax;
-                grandtotal = totalcost + Tax;
+            //    //markupCogs = Convert.ToInt32((cogs + (cogs * standardMarkup)));
+            //    //markupGears = Convert.ToInt32((gears + (cogs * standardMarkup)));
+            //    discountAmount = 0.00;
+            //    totalcost = (cogs1 * markupCogs)+(gears1*markupGears);
+            //    Tax = totalcost * salesTax;
+            //    grandtotal = totalcost + Tax;
 
-                Console.WriteLine($"The total cost for the items are {totalcost:c}.\n" +
-                    $"The discount amount is {discountAmount:c}.\n" +
-                    $"The sales tax is {Tax:c}.\n" +
-                    $"The grand total is {grandtotal:c}");
+            //    Console.WriteLine($"The total cost for the items are {totalcost:c}.\n" +
+            //        $"The discount amount is {discountAmount:c}.\n" +
+            //        $"The sales tax is {Tax:c}.\n" +
+            //        $"The grand total is {grandtotal:c}");
 
 
 
-            }
-            else if (cogs1 > 10 || gears1 > 10 || cogs1 + gears1 >= 16)
+            //}
+            if (cogs1 > 10 || gears1 > 10 || cogs1 + gears1 >= 16)
             {
 
            
@@ -71,6 +71,18 @@ namespace HW_1_Progamming_2_Jenna_Tran
                 $"The discount amount is {discountAmount:c}.\n" +
                 $"The sales tax is {Tax:c}.\n" +
                 $"The grand total is {grandtotal:c}");
+            }
+            else
+            {
+                discountAmount = 0.00;
+                totalcost = (cogs1 * markupCogs) + (gears1 * markupGears);
+                Tax = totalcost * salesTax;
+                grandtotal = totalcost + Tax;
+
+                Console.WriteLine($"The total cost for the items are {totalcost:c}.\n" +
+                    $"The discount amount is {discountAmount:c}.\n" +
+                    $"The sales tax is {Tax:c}.\n" +
+                    $"The grand total is {grandtotal:c}");
             }
           
 
