@@ -28,42 +28,22 @@ namespace HW_1_Progamming_2_Jenna_Tran
 
             int cogs1, gears1;
             const double salesTax = 0.089;
-            double totalcost, discountAmount, Tax, grandtotal, markupCogs,markupGears,discountCogs,discountGears;
+          double totalcost, discountAmount, Tax, grandtotal, StandMarkupCogs,StandMarkupGears,SpecMarkupCogs,SpecMarkupGears;
             Console.WriteLine("Please enter the number of cogs needed for a saleorder.");
             cogs1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please enter the number of gears needed for a saleorder.");
             gears1 = Convert.ToInt32(Console.ReadLine());
-            markupCogs = ((cogs + (cogs * standardMarkup)));
-            markupGears =((gears + (cogs * standardMarkup)));
-            discountCogs = ((cogs + (cogs * specialMarkup)));
-            discountGears = ((gears + (cogs * specialMarkup)));
+            StandMarkupCogs = ((cogs + (cogs * standardMarkup)));
+            StandMarkupGears =((gears + (cogs * standardMarkup)));
+            SpecMarkupCogs = ((cogs + (cogs * specialMarkup)));
+            SpecMarkupGears = ((gears + (cogs * specialMarkup)));
 
-            
-            //{
-            //   // markupamount = cogs * standardMarkup;
-               
-            //    //markupCogs = Convert.ToInt32((cogs + (cogs * standardMarkup)));
-            //    //markupGears = Convert.ToInt32((gears + (cogs * standardMarkup)));
-            //    discountAmount = 0.00;
-            //    totalcost = (cogs1 * markupCogs)+(gears1*markupGears);
-            //    Tax = totalcost * salesTax;
-            //    grandtotal = totalcost + Tax;
-
-            //    Console.WriteLine($"The total cost for the items are {totalcost:c}.\n" +
-            //        $"The discount amount is {discountAmount:c}.\n" +
-            //        $"The sales tax is {Tax:c}.\n" +
-            //        $"The grand total is {grandtotal:c}");
-
-
-
-            //}
+           
             if (cogs1 > 10 || gears1 > 10 || cogs1 + gears1 >= 16)
             {
 
-           
-
-                discountAmount = (cogs1 * (markupCogs - discountCogs)) +( gears1 * (markupGears - discountGears));
-                totalcost = (cogs1 * discountCogs) + (gears1 * discountGears);
+                discountAmount = (cogs1 * (StandMarkupCogs - SpecMarkupCogs)) +( gears1 * (StandMarkupGears - SpecMarkupGears));
+                totalcost = (cogs1 * SpecMarkupCogs) + (gears1 * SpecMarkupGears);
                 Tax = totalcost * salesTax;
                 grandtotal = totalcost + Tax;
 
@@ -75,7 +55,7 @@ namespace HW_1_Progamming_2_Jenna_Tran
             else
             {
                 discountAmount = 0.00;
-                totalcost = (cogs1 * markupCogs) + (gears1 * markupGears);
+                totalcost = (cogs1 * StandMarkupCogs) + (gears1 * StandMarkupGears);
                 Tax = totalcost * salesTax;
                 grandtotal = totalcost + Tax;
 
