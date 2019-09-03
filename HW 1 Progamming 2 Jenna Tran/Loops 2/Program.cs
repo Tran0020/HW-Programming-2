@@ -4,7 +4,7 @@ namespace Loops_2
     class Program
     {
         static void Main(string[] args)
-        {
+        {// NEED HELP WITH
             //            Create an application that asks the user for their exam score,
             //    add their input to an accumulator and then ask the user if they have another score to enter.
             //                If they do, ask for the exam score and repeat the process until they say no.

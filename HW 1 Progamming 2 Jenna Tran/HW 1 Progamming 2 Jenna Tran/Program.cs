@@ -11,7 +11,7 @@ namespace HW_1_Progamming_2_Jenna_Tran
 
 
         static void Main(string[] args)
-        {
+        {//DONE
             //You will be creating an application to help our sales associates sell our main products, cogs and gears.
             // Cogs have a whole sale price of $79.99 and gears have a whole sale price of $250.00.
             // When our sales associates are selling to our customers on the floor, 

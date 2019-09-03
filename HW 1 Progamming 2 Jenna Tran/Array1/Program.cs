@@ -5,7 +5,7 @@ namespace Array1
     class Program
     {
         static void Main(string[] args)
-        {
+        {//DONE
             //Create a console application that prompts the user to enter the item they desire, and return the value / price of the item.
             //  Your console application should contain two parallel arrays, as well as an error if they enter or spell 
             //   the item name incorrectly.

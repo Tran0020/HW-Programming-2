@@ -5,7 +5,7 @@ namespace Array_2
     class Program
     {
         static void Main(string[] args)
-        {
+        {//DONE
             //Create a console application that will print out your first name and last name, with correct punctuation
             //(e.g.upper case characters where needed, like the first letter of each name). 
             //To get the characters, create two arrays, the first one with all of the lower -case characters 

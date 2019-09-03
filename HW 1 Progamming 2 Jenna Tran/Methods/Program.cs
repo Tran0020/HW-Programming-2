@@ -3,7 +3,7 @@
 namespace Methods
 {
     class Program
-
+//DONE
 
     //    The first method that you will need to create is to calculate the y value of a line,
     //        given by the slope(m), the x value(x) and the y intercept(b).  

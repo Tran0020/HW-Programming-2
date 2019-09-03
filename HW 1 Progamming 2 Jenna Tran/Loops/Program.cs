@@ -6,7 +6,7 @@ namespace Loops
     class Program
     {
         static void Main(string[] args)
-        {
+        {//DONE
             //Create an application that will keep prompting the user to input all 3 of their exam grades(using a For loop). 
             //Calculate the average of their exam scores and output the result.
             //When you display the result, make sure to use a Format Specifier for percentages.

@@ -6,7 +6,7 @@ namespace Dictionary
     class Program
     {
         static void Main(string[] args)
-        {
+        {//NEED HELP don't know how to find to connect key with values
             // Redo the Arrays problem, however this time use a dictionary.  
             //Your key value will be the fruit name and the value will be the price of the piece of fruit.
             Dictionary<string, double> fruit = new Dictionary<string, double>();
