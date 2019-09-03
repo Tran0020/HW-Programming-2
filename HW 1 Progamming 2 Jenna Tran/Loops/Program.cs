@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Loops
 {
@@ -13,8 +14,8 @@ namespace Loops
 
 
             double[] scores = new double[3];
-            double avgscore = 0;
-            double grades;
+            double avgscore,totalscores = 0;
+            
 
 
 
@@ -25,8 +26,9 @@ namespace Loops
                 
 
             }
-
-            Console.WriteLine($"Your average exam score is {avgscore:P}");
+            totalscores = scores.Sum();
+            avgscore = totalscores / 3;
+            Console.WriteLine($"Your average exam score is {avgscore/100:p}");
             Console.ReadLine();
 
         }
