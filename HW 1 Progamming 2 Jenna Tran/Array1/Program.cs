@@ -17,12 +17,12 @@ namespace Array1
             string[] fruit = { "apples", "oranges", "bananas", "grapes", "blueberries" };
             double[] price = { 0.99, 0.50, 0.50, 2.99, 1.99 };
             string fruitname;
-            bool isvalid = false;
-            Console.WriteLine("Please enter the fruit you desire.");
-            fruitname = Console.ReadLine();
+            bool isvalid = false;        
             int i;
            do
             {
+                Console.WriteLine("Please enter the fruit you desire.");
+                fruitname = Console.ReadLine();
                 for (i = 0; i < fruit.Length - 1; i++)
                 {
                     if (fruitname == fruit[i])
