@@ -6,7 +6,7 @@ namespace List
     class Program
     {
         static void Main(string[] args)
-        {//NEED HELP WITH 
+        {
             //            Create a console application that prompts the user to create a list of exam grades
             //                and then calculates the average. Your application should include two loops:
 
@@ -33,7 +33,7 @@ namespace List
             for (int i = 0; i < grades.Count; i++)
             {
 
-                sum = sum + (grades[i]);
+                sum =sum+ grades[i];
                 average = sum / (i + 1);
                
             }
