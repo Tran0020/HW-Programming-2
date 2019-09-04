@@ -14,7 +14,6 @@ namespace List
             //Loop #2 should calculate the sum and average of the total quiz grades.
 
             double quizgrades;
-            double sum, avg;
             string response;
             List<double> grades = new List<double>();
             //Console.WriteLine("Please list all your quiz grades");
@@ -28,9 +27,18 @@ namespace List
                 response = Console.ReadLine();
 
             } while (response == "Yes");
-            grades.Add(quizgrades);
+            double sum = 0;
+            double average = 0;
 
-            Console.WriteLine($"{grades}");
+            for (int i = 0; i < grades.Count; i++)
+            {
+
+                sum = sum + (grades[i]);
+                average = sum / (i + 1);
+               
+            }
+
+            Console.WriteLine($"The sum of the test {sum} and the average is {average / 100:P}  ");
             Console.ReadKey();
         }
     }

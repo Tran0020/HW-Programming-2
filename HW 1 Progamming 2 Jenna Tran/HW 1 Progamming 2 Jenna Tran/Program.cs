@@ -28,21 +28,21 @@ namespace HW_1_Progamming_2_Jenna_Tran
 
             int cogs1, gears1;
             const double salesTax = 0.089;
-          double totalcost, discountAmount, Tax, grandtotal, StandMarkupCogs,StandMarkupGears,SpecMarkupCogs,SpecMarkupGears;
+            double totalcost, discountAmount, Tax, grandtotal, StandMarkupCogs, StandMarkupGears, SpecMarkupCogs, SpecMarkupGears;
             Console.WriteLine("Please enter the number of cogs needed for a saleorder.");
             cogs1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please enter the number of gears needed for a saleorder.");
             gears1 = Convert.ToInt32(Console.ReadLine());
             StandMarkupCogs = ((cogs + (cogs * standardMarkup)));
-            StandMarkupGears =((gears + (cogs * standardMarkup)));
+            StandMarkupGears =((gears + (gears * standardMarkup)));
             SpecMarkupCogs = ((cogs + (cogs * specialMarkup)));
-            SpecMarkupGears = ((gears + (cogs * specialMarkup)));
+            SpecMarkupGears = ((gears + (gears * specialMarkup)));
 
-           
+
             if (cogs1 > 10 || gears1 > 10 || cogs1 + gears1 >= 16)
             {
 
-                discountAmount = (cogs1 * (StandMarkupCogs - SpecMarkupCogs)) +( gears1 * (StandMarkupGears - SpecMarkupGears));
+                discountAmount = (cogs1 * (StandMarkupCogs - SpecMarkupCogs)) + (gears1 * (StandMarkupGears - SpecMarkupGears));
                 totalcost = (cogs1 * SpecMarkupCogs) + (gears1 * SpecMarkupGears);
                 Tax = totalcost * salesTax;
                 grandtotal = totalcost + Tax;
@@ -55,6 +55,7 @@ namespace HW_1_Progamming_2_Jenna_Tran
             else
             {
                 discountAmount = 0.00;
+
                 totalcost = (cogs1 * StandMarkupCogs) + (gears1 * StandMarkupGears);
                 Tax = totalcost * salesTax;
                 grandtotal = totalcost + Tax;
@@ -64,7 +65,7 @@ namespace HW_1_Progamming_2_Jenna_Tran
                     $"The sales tax is {Tax:c}.\n" +
                     $"The grand total is {grandtotal:c}");
             }
-          
+
 
             Console.ReadLine();
 

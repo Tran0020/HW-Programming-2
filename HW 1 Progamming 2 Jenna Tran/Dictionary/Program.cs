@@ -6,7 +6,7 @@ namespace Dictionary
     class Program
     {
         static void Main(string[] args)
-        {//NEED HELP don't know how to find to connect key with values
+        {//DONE
             // Redo the Arrays problem, however this time use a dictionary.  
             //Your key value will be the fruit name and the value will be the price of the piece of fruit.
             Dictionary<string, double> fruit = new Dictionary<string, double>();
@@ -15,29 +15,19 @@ namespace Dictionary
             fruit.Add("bananas", 0.50);
             fruit.Add("grapes", 2.99);
             fruit.Add("blueberries", 1.99);
-            //bool isvalid = false;
-            double price;
             string fruitname;
-            do
-            {
             Console.WriteLine("Please enter the fruit you desire.");
             fruitname = Console.ReadLine();
-
-            if (fruit.ContainsKey("apples"))
-                {
-                    fruitname = fruit("apples");
-                Console.WriteLine($"The price of apples is {price:C}");
-                }
-            else if(fruit.TryGetValue("oranges",out price))
+            if (fruit.ContainsKey(fruitname))
             {
-                Console.WriteLine($"The price of oranges is {price:c}");
+                double value = fruit[fruitname.ToLower()];
+                Console.WriteLine($"The price of {fruitname} is {value:c}");
             }
-            
-            } while (fruitname != KeyValuePair<string,double>);
-
-            
+       
 
 
+
+            Console.ReadKey();
 
         }
     }

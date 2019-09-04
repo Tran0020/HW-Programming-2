@@ -4,7 +4,7 @@ namespace Loops_2
     class Program
     {
         static void Main(string[] args)
-        {// NEED HELP WITH
+        {// DONE
             //            Create an application that asks the user for their exam score,
             //    add their input to an accumulator and then ask the user if they have another score to enter.
             //                If they do, ask for the exam score and repeat the process until they say no.
@@ -17,33 +17,34 @@ namespace Loops_2
             //and a counting variable(to keep track of the number of scores they entered).
 
             double examscore;
-            string response="";
-            Console.WriteLine("Please enter your exam score.");
-            examscore = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Do you want to list another exam grade?");
-            Console.WriteLine("Type 'Yes' if you want to continue to input your exam grades. Type 'No' to move on.");
-            string.Equals("Yes", "yes", StringComparison.CurrentCultureIgnoreCase);
-            response = Console.ReadLine();
-            while ( response == "Yes")
+            string response="Yes";           
+            double acctest = 0;
+            int numoftest=0;
+            
+            while ( response.ToLower() == "yes")
             {
                 Console.WriteLine("Please enter your exam score.");
                 examscore = Convert.ToDouble(Console.ReadLine());
+                acctest = acctest + examscore;
+                numoftest++;
                 Console.WriteLine("Do you want to list another exam grade?");
-                 Console.WriteLine("Type 'Yes' if you want to continue to input your exam grades. Type 'No' to move on.");
-                string.Equals("Yes", "yes", StringComparison.CurrentCultureIgnoreCase);
-                response = Console.ReadLine();
-                //if (response == "No")
-                //{
-                //    double examtotal;
-                //    examtotal = examscore + examscore++;
-                //    Console.WriteLine($"{examtotal}");
-                //}
+                 Console.WriteLine("Type 'yes' if you want to continue to input your exam grades. Type 'no' to move on.");
+        
+                response = (Console.ReadLine());
+               
+
+                if (response == "yes")
+                {
+                    Console.WriteLine($"Please enter your exam score");
+                    
+                }
+
 
             }
 
             double examtotal;
-            examtotal = examscore + examscore;
-            Console.WriteLine($"{examtotal}");
+            examtotal = acctest/numoftest;
+            Console.WriteLine($" The average of your exams are {examtotal/100:P}");
             Console.ReadKey();
         }
     }
