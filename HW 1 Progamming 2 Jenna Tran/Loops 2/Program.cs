@@ -31,13 +31,7 @@ namespace Loops_2
                  Console.WriteLine("Type 'yes' if you want to continue to input your exam grades. Type 'no' to move on.");
         
                 response = (Console.ReadLine());
-               
-
-                if (response == "yes")
-                {
-                    Console.WriteLine($"Please enter your exam score");
-                    
-                }
+              
 
 
             }

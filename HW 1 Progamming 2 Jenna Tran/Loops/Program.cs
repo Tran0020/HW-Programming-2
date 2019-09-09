@@ -14,7 +14,7 @@ namespace Loops
 
 
             double[] scores = new double[3];
-            double avgscore,totalscores = 0;
+            double avgscore,totalscores;
             
 
 
